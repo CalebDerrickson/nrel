@@ -1,0 +1,23 @@
+open powershell
+conda activate rex
+jupyter notebook
+HAVE NOTEBOOKS AT THAT LEVEL ONLY
+
+Can check if have access by running
+
+import h5pyd
+with h5pyd.Folder('/nrel/') as f:
+    print(list(f))
+
+with h5pyd.Folder('/nrel/nsrdb/') as f:
+    print(list(f))
+
+with h5pyd.Folder('/nrel/wtk/') as f:
+    print(list(f))
+
+I get 
+['US_wave', 'building_synthetic_dataset', 'dsgrid-2018-efs', 'ncdb', 'nsrdb', 'porotomo', 'sup3rcc', 'test', 'umcm', 'wtk-led', 'wtk-us.h5', 'wtk']
+['GOES', 'conus', 'current', 'full_disc', 'himawari', 'india', 'meteosat', 'msg', 'philippines', 'puerto_rico', 'tall.h5', 'v3', 'vietnam']
+['wtk', 'NOW-WAKES_Mid_Atlantic', 'bangladesh', 'bchrrr', 'canada-5min', 'canada', 'canada_bc', 'central_asia', 'conus-5min', 'conus', 'great_lakes-5min', 'great_lakes', 'guam', 'gulf_of_mexico', 'hawaii-5min', 'hawaii', 'india', 'indonesia', 'kazakhstan', 'led', 'maine', 'mexico-5min', 'mexico', 'mid_atlantic-5min', 'mid_atlantic', 'north_america', 'now23_california', 'nw_pacific-5min', 'nw_pacific', 'offshore_ca-5min', 'offshore_ca', 'philippines', 'pr100', 'seasiawind', 'seasiawind_v2', 'seasiawind_v3', 'south_atlantic', 'sup3rwind', 'vietnam', 'wtk-led']
+
+alternatively, I was also able to see the dataset by running hsls /nrel/ in the shell.
